@@ -163,6 +163,9 @@ def pytest_runtestloop_handle_async_by_group(session: pytest.Session) -> Generat
 
     result = yield
 
+    if session.config.option.collectonly:
+        return result
+
     for i, group in enumerate(groups):
         nextgroup = groups[i + 1] if i + 1 < len(groups) else None
         ihook.pytest_runtest_protocol_async_group(group=group, nextgroup=nextgroup)
