@@ -7,7 +7,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "pytest-asyncio-concurrent"
 description = "Pytest plugin to execute python async tests concurrently."
-version = "0.5.1"
+version = "0.5.2"
 readme = "README.rst"
 requires-python = ">=3.8"
 authors = [
@@ -84,7 +84,7 @@ concurrency = [
 show_missing = true
 
 [tool.bumpversion]
-current_version = "0.5.1"
+current_version = "0.5.2"
 parse = """(?x)
   (?P<major>0|[1-9]\\d*)\\.
   (?P<minor>0|[1-9]\\d*)\\.
